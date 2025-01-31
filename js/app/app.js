@@ -1,10 +1,11 @@
 import {router} from './router.js';
+import {msg} from './widgets/msg.js';
 
 document.addEventListener('DOMContentLoaded', function(){
     const main = {
         data() {
             return {
-                url:"http://affiliate.andriimakarenko.com",
+                url:"http://affiliate.yanbasok.com",
                 user: {name:"", phone:"", email:"", date:"", auth:""},
                 formData:{},
                 title:"",
@@ -79,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function(){
       };
     
     var app = Vue.createApp(main)
+    .component('msg',msg)
     .use(router)
     .mount('#content')
 });
